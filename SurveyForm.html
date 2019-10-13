@@ -2,44 +2,139 @@
 
 <head>
 <style>
+  #title{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 50%;
+    background-color: lightblue;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: blue;
+  }
+  #description{
+    text-align: center;
+  }
+  #image{
+    max-width: 40vw;
+    display: block;
+    height: auto;
+    margin: auto;
+    padding: 3 3 3 3;
+  }
+  .rowLeft{
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .rowRight{
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  #submit{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    height: 50px;
+    width: 100px;
+    background-color: lightblue;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: blue;
+  }
 </style>
 </head>
 
 <body>
-  <h1 id="title">Insert title here</h1>
-  <p id="description">Insert description here.</p>
+  <h1 id="title">Stardew Valley</h1>
+  <p id="description">A gameplay survey form.</p>
+  <img id= "image" src="StardewValleyLogo.jpg">
   <form id="survey-form">
-    <label for="name" id="name-label">
-      <p>* Name:</p>
-      <input id="name" type="text" required placeholder="Name">
-    </label>
-    <label for="email" id="email-label">
-      <p>* E-mail:</p>
-      <input id="email" type="email" required placeholder="E-mail">
-    </label>
-    <label for="age" id="age-label">
-      <p>* Age:</p>
-      <input id="age" type="number" placeholder="Age" min="0" max="150">
-    </label>
-      <select id="dropdown">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      <label for="radio-A" id="radio-A-label">
-        <input id="radio-A" type="radio" name="ABCD">A
-    </label>
-    <label for="radio-B" id="radio-B-label">
-      <input id="radio-B" type="radio" name="ABCD">B
-    </label>
-    <label for="check-a" id="check-a-label">
-      <input id="check-a" type="checkbox" name="abcd" value="a">a
-    </label>
-      <label for="check-b" id="check-b-label">
-        <input id="check-b" type="checkbox" name="abcd" value="b">b
-    </label>
-    <textarea rows="5" cols="50" name="textarea" placeholder="Comments"></textarea>
-    <button type="submit">Submit</button>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="name" id="name-label">* Name:</label>
+      </div>
+      <div class="rowRight">
+        <input id="name" type="text" required placeholder="Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="email" id="email-label">* E-mail:</label>
+      </div>
+      <div class="rowRight">
+        <input id="email" type="email" required placeholder="E-mail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="years" id="years-label">* Which year have you reached in-game?</label>
+      </div>
+      <div class="rowRight">
+        <input id="years" type="number" required placeholder="Year" min="1" max="150">
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="dropdown" id="dropdown-label">* What is the gender of your Player Character?</label>
+      </div>
+      <div class="rowRight">
+        <select id="dropdown" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="marriage" id="radio-label">* Did you marry a bachelor(ette) in the game?</label>
+      </div>
+      <div class="rowRight">
+        <label><input id="radio-yes" value="yes" type="radio" name="marriage">Yes</label>
+        <label><input id="radio-no" value="no" type="radio" name="marriage" checked>No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="bachelors" id="bachelors-label">Who are your favourite bachelors?<br>(Multiple choices possible)</label>
+      </div>
+      <div class="rowRight">
+        <label><input id="check-Alex" type="checkbox" name="bachelors" value="Alex">Alex</label><br>
+        <label><input id="check-Elliot" type="checkbox" name="bachelors" value="Elliot">Elliot</label><br>
+        <label><input id="check-Harvey" type="checkbox" name="bachelors" value="Harvey">Harvey</label><br>
+        <label><input id="check-Sam" type="checkbox" name="bachelors" value="Sam">Sam</label><br>
+        <label><input id="check-Sebastian" type="checkbox" name="bachelors" value="Sebastian">Sebastian</label><br>
+        <label><input id="check-Shane" type="checkbox" name="bachelors" value="Shane">Shane</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="bachelorettes" id="bachelorettes-label">Who are your favourite bachelorettes?<br>(Multiple choices possible)</label>
+      </div>
+      <div class="rowRight">
+        <label><input id="check-Abigail" type="checkbox" name="bachelorettes" value="Abigail">Abigail</label><br>
+        <label><input id="check-Emily" type="checkbox" name="bachelorettes" value="Emily">Emily</label><br>
+        <label><input id="check-Haley" type="checkbox" name="bachelorettes" value="Haley">Haley</label><br>
+        <label><input id="check-Leah" type="checkbox" name="bachelorettes" value="Leah">Leah</label><br>
+        <label><input id="check-Maru" type="checkbox" name="bachelorettes" value="Maru">Maru</label><br>
+        <label><input id="check-Penny" type="checkbox" name="bachelorettes" value="Penny">Penny</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="comments" id="comments-label">Any comments?</label>
+      </div>
+      <div class="rowRight">
+        <textarea id="commentsarea" style="height:50px;width:80%;" name="comments" placeholder="Comments"></textarea>
+      </div>
+    </div>
+
+    <button id="submit" type="submit">Submit</button>
   </form>
 </body>
 
