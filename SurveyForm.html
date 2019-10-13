@@ -80,10 +80,10 @@
     </div>
     <div class="row">
       <div class="rowLeft">
-        <label for="years" id="years-label">* Which year have you reached in-game?</label>
+        <label for="number" id="number-label">* Which year have you reached in-game?</label>
       </div>
       <div class="rowRight">
-        <input id="years" type="number" required placeholder="Year" min="1" max="150">
+        <input id="number" type="number" required placeholder="Year" min="1" max="999">
       </div>
     </div>
     <div class="row">
@@ -95,6 +95,15 @@
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="pet" id="radio-label">* Did you choose the dog or the cat?</label>
+      </div>
+      <div class="rowRight">
+        <label><input id="radio-cat" value="cat" type="radio" name="pet">Cat</label>
+        <label><input id="radio-dog" value="dog" type="radio" name="pet" checked>Dog</label>
       </div>
     </div>
     <div class="row">
@@ -151,7 +160,6 @@
         <textarea id="commentsarea" style="height:50px;width:80%;" name="comments" placeholder="Comments"></textarea>
       </div>
     </div>
-
     <button id="submit" type="submit">Submit</button>
   </form>
 </body>
