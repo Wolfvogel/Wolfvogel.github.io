@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style>
+</style>
+</head>
+
+<body>
+  <h1 id="title">Insert title here</h1>
+  <p id="description">Insert description here.</p>
+  <form id="survey-form">
+    <label for="name" id="name-label">
+      <p>* Name:</p>
+      <input id="name" type="text" required placeholder="Name">
+    </label>
+    <label for="email" id="email-label">
+      <p>* E-mail:</p>
+      <input id="email" type="email" required placeholder="E-mail">
+    </label>
+    <label for="age" id="age-label">
+      <p>* Age:</p>
+      <input id="age" type="number" placeholder="Age" min="0" max="150">
+    </label>
+      <select id="dropdown">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="radio-A" id="radio-A-label">
+        <input id="radio-A" type="radio" name="ABCD">A
+    </label>
+    <label for="radio-B" id="radio-B-label">
+      <input id="radio-B" type="radio" name="ABCD">B
+    </label>
+    <label for="check-a" id="check-a-label">
+      <input id="check-a" type="checkbox" name="abcd" value="a">a
+    </label>
+      <label for="check-b" id="check-b-label">
+        <input id="check-b" type="checkbox" name="abcd" value="b">b
+    </label>
+    <textarea rows="5" cols="50" name="textarea" placeholder="Comments"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
