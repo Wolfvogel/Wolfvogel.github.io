@@ -2,39 +2,45 @@
 
 <head>
 <style>
-  #title{
+  body{
+    background-image: url("StardewValleyBackground.png");
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+  #title-div{
     text-align: center;
     display: block;
     margin: auto;
     width: 50%;
-    background-color: lightblue;
+    padding: 10px;
+    background-color: #1a9999;
     border: solid 2px;
     border-radius: 10px;
-    border-color: blue;
+    border-color: #014587;
   }
-  #description{
-    text-align: center;
-  }
-  #image{
-    max-width: 40vw;
+  #survey-form{
     display: block;
-    height: auto;
     margin: auto;
-    padding: 3 3 3 3;
+    padding: 10px;
+    width: 50%;
+    background-color: #64E4E5;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: #014587;
   }
   .rowLeft{
     display: inline-block;
     text-align: right;
     vertical-align: top;
-    width: 40%;
-    padding: 10px;
-    margin-top: 10px;
+    width: 45%;
+    padding: 5px;
+    margin-top: 5px;
   }
   .rowRight{
     display: inline-block;
     width: 48%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 5px;
+    margin-top: 5px;
   }
   #submit{
     display: block;
@@ -42,18 +48,19 @@
     margin-top: 20px;
     height: 50px;
     width: 100px;
-    background-color: lightblue;
+    background-color: #21c4c4;
     border: solid 2px;
     border-radius: 10px;
-    border-color: blue;
+    border-color: #014587;
   }
 </style>
 </head>
 
 <body>
-  <h1 id="title">Stardew Valley</h1>
-  <p id="description">A gameplay survey form.</p>
-  <img id= "image" src="StardewValleyLogo.jpg">
+  <div id="title-div">
+    <h1 id="title">Stardew Valley</h1>
+    <p id="description">A gameplay survey form.</p>
+  </div>
   <form id="survey-form">
     <div class="row">
       <div class="rowLeft">
@@ -123,6 +130,17 @@
         <label><input id="check-Leah" type="checkbox" name="bachelorettes" value="Leah">Leah</label><br>
         <label><input id="check-Maru" type="checkbox" name="bachelorettes" value="Maru">Maru</label><br>
         <label><input id="check-Penny" type="checkbox" name="bachelorettes" value="Penny">Penny</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowLeft">
+        <label for="seasons" id="seasons-label">Which are your favourite seasons during gameplay?<br>(Multiple choices possible)</label>
+      </div>
+      <div class="rowRight">
+        <label><input id="check-Spring" type="checkbox" name="seasons" value="Spring">Spring</label><br>
+        <label><input id="check-Summer" type="checkbox" name="seasons" value="Summer">Summer</label><br>
+        <label><input id="check-Fall" type="checkbox" name="seasons" value="Fall">Fall</label><br>
+        <label><input id="check-Winter" type="checkbox" name="seasons" value="Winter">Winter</label>
       </div>
     </div>
     <div class="row">
