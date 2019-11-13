@@ -16,8 +16,11 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: blue;
     z-index: 999;
+  }
+  #header-img {
+    width: 45px;
+    height: 45px;
   }
   #nav-bar {
     width: 90%;
@@ -26,8 +29,20 @@
     overflow: hidden;
     justify-content: space-around;
     align-items: center;
-    background-color: lightblue;
+    background-color: #ffff66;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #734d26;
     border-radius: 10px;
+  }
+  .nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    color: black;
   }
   #main {
     margin-top: 90px;
@@ -38,8 +53,33 @@
     width: 640;
     height: 480;
   }
+  .levelSingle {
+    display: inline-block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #ffff99;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #734d26;
+    border-radius: 10px;
+    width: 35%;
+  }
+  .levelCombo {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      background-color: #ffff99;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #734d26;
+      border-radius: 10px;
+      width: 40%;
+  }
   #form {
     margin-top: 40px;
+  }
+  #TinyEagleImg, #AngryEagleImg, #ComboEaglesImg {
+    width: 90%;
   }
   @media (max-width: 700px) {
     #video {width: 480; height: 360;}
@@ -52,20 +92,39 @@
 
 <body>
 <header id="header">
-  <img id="header-img" src="...">
+  <img id="header-img" src="EagleLogo.png">
   <nav id="nav-bar">
-    <a class="nav-link" href="video">Video</a>
-    <a class="nav-link" href="form">Form</a>
+    <a class="nav-link" href="#video">Video</a>
+    <a class="nav-link" href="#levels">Levels</a>
+    <a class="nav-link" href="#form">Form</a>
   </nav>
 </header>
 <main id="main">
-  <h1>Insert Title Here</h1>
+  <h1>Tiny Eagles</h1>
   <video id="video" controls>
-    <source src="....mp4" type="video/mp4">
+    <source src="EagleMovie.mov" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <p>Text text text text text.</p>
+  <p>The tiniest and cutest eagles around. Pick the adorable TinyEagle, the fierce AngryEagle, or get the combo deal!</p>
+  <div id="levels">
+    <div class="levelSingle">
+      <h2><bold>TinyEagle</bold></h2>
+        <img id="TinyEagleImg" src="TinyEagle.jpg">
+        <p>One adorable, pocketsized TinyEagle <br>€5,-</p>
+      </div>
+    <div class="levelSingle">
+      <h2><bold>AngryEagle</bold></h2>
+        <img id="AngryEagleImg" src="AngryEagle.jpg">
+        <p>One fierce, pocketsized AngryEagle <br>€5,-</p>
+      </div>
+    <div class="levelCombo">
+      <h2><bold>TinyEagle + AngryEagle</bold></h2>
+        <img id="ComboEaglesImg" src="ComboEagles.jpg">
+        <p>One adorable TinyEagle AND one fierce AngryEagle <br>€8,-</p>
+      </div>
+  </div>
   <form id="form">
+    <p>Leave your email here if you'd like to hear when there's a new batch of eagles available:</p>
     <input id="email" type="email" required placeholder="E-mail">
     <button type="submit" id="submit">Submit</button>
   </form>
