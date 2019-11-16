@@ -1,6 +1,16 @@
 <html>
 <head>
 <style>
+  body {
+    font-family: sans-serif;;
+    font-size: 15px;
+  }
+  h1 {
+    color: #993366;
+  }
+  code {
+    background-color: #f0dbe6;
+  }
   #example1 {
     height: 40px;
     width: 40px;
@@ -65,6 +75,31 @@
   @keyframes HorizontalMove {
     0% {left: 0vw;}
     100% {left: 90vw;}
+  }
+  #navbar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 5px;
+    background-color: #df9fbf;
+  }
+  .nav-link {
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: #4d1933;
+  }
+  .nav-link:hover {
+    color: #ff0080;
+  }
+  #main-doc {
+    margin-left: 160px;
+    padding: 0px 10px;
   }
 </style>
 </head>
