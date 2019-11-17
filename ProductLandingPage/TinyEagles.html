@@ -5,6 +5,10 @@
   body {
     font-family: sans-serif;
     font-size: 15px;
+    /* background-image: url("Sunset.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
   }
   #header {
     position: fixed;
@@ -29,7 +33,7 @@
     overflow: hidden;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffff66;
+    background-color: #f7c96e;
     border-style: solid;
     border-width: 2px;
     border-color: #734d26;
@@ -51,13 +55,13 @@
   #video {
     margin-top: 10px;
     width: 640;
-    height: 480;
+    background-color: white;
+    border-radius: 10px;
   }
   .levelSingle {
     display: inline-block;
-    margin: auto;
-    margin-top: 20px;
-    background-color: #ffff99;
+    margin: 10px;
+    background-color: #f7c96e;
     border-style: solid;
     border-width: 3px;
     border-color: #734d26;
@@ -65,15 +69,17 @@
     width: 35%;
   }
   .levelCombo {
-      display: block;
-      margin: auto;
+      display: inline-block;
       margin-top: 20px;
-      background-color: #ffff99;
+      background-color: #f7c96e;
       border-style: solid;
       border-width: 3px;
       border-color: #734d26;
       border-radius: 10px;
       width: 40%;
+  }
+  .productImg {
+    border-radius: 10px;
   }
   #form {
     margin-top: 40px;
@@ -82,10 +88,10 @@
     width: 90%;
   }
   @media (max-width: 700px) {
-    #video {width: 480; height: 360;}
+    #video {width: 480;}
   }
   @media (max-width: 540px) {
-    #video {width: 320; height: 240;}
+    #video {width: 320;}
   }
 </style>
 </head>
@@ -109,24 +115,24 @@
   <div id="levels">
     <div class="levelSingle">
       <h2><bold>TinyEagle</bold></h2>
-        <img id="TinyEagleImg" src="TinyEagle.jpg">
+        <img class="productImg" id="TinyEagleImg" src="TinyEagle.jpg">
         <p>One adorable, pocketsized TinyEagle <br>€5,-</p>
       </div>
     <div class="levelSingle">
       <h2><bold>AngryEagle</bold></h2>
-        <img id="AngryEagleImg" src="AngryEagle.jpg">
+        <img class="productImg" id="AngryEagleImg" src="AngryEagle.jpg">
         <p>One fierce, pocketsized AngryEagle <br>€5,-</p>
       </div>
     <div class="levelCombo">
       <h2><bold>TinyEagle + AngryEagle</bold></h2>
-        <img id="ComboEaglesImg" src="ComboEagles.jpg">
+        <img class="productImg" id="ComboEaglesImg" src="ComboEagles.jpg">
         <p>One adorable TinyEagle AND one fierce AngryEagle <br>€8,-</p>
       </div>
   </div>
   <form id="form">
     <p>Leave your email here if you'd like to hear when there's a new batch of eagles available:</p>
     <input id="email" type="email" required placeholder="E-mail">
-    <button type="submit" id="submit">Submit</button>
+    <input type="submit" id="submit" formaction="https://www.freecodecamp.com/email-submit"></button>
   </form>
 </main>
 </body>
