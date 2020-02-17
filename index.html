@@ -2,26 +2,159 @@
 <html>
 <head>
   <style>
+    body {
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+    h1 {
+      font-size: 35px;
+      padding-top: 40px;
+      margin-top: 0px;
+      color: #003d99
+    }
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 5vh;
+      background-color: #169c3a;
+      z-index: 999;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom-style: solid;
+      border-color: #0a4319;
+    }
+    #welcome-section {
+      height: 100vh;
+      background-color: #bcf5cb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #0a4319
+    }
+    #projects {
+      text-align: center;
+      background-color: #b3d1ff;
+    }
+    #personal-projects {
+      text-align: center;
+      background-color: #d9b3ff;
+    }
+    .navlink {
+      font-size: 20px;
+      text-decoration: none;
+      color: #0a4319;
+      font-weight: 600;
+    }
+    .navlink:hover {
+      text-decoration: underline;
+    }
+    .project-tile, .personal-project-tile {
+      border-style: solid;
+      display: inline-block;
+      margin: 10px;
+      height: 380px;
+      width: 350px;
+      text-align: center;
+    }
+    .project-tile {
+      border-color: #003d99;
+      background-color: #003d99;
+    }
+    .personal-project-tile {
+      border-color: #400080;
+      background-color: #400080;
+    }
+    .project-tile-img {
+      display: inline-block;
+      height: 350px;
+      width: 350px;
+    }
+    .project-tile-link, .personal-project-tile-link {
+      font-size: 19px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project-tile-link {
+      color: #b3d1ff;
+    }
+    .personal-project-tile-link {
+      color: #d9b3ff;
+    }
+    .project-tile-link:hover, .personal-project-tile-link:hover {
+      text-decoration: underline;
+    }
+    /* @media */
   </style>
 </head>
 
 <body>
   <header>
-    <nav id="nav-bar">
-      <a href="#projects">Projects</a>
+    <nav id="navbar">
+      <a class="navlink" href="#welcome">Welcome</a>
+      <a class="navlink" href="#projects">freeCodeCamp projects</a>
+      <a class="navlink" href="#personal-projects">Personal projects</a>
+      <a class="navlink" href="#profile-link">Further links</a>
     </nav>
   </header>
   <section id="welcome-section">
-    <h1>Placeholder</h1>
-    <p>Textextext</p>
+    <div id="welcome">
+      <h1 style="font-size:70px;">Welcome!</h1>
+      <img src="Lidewij.jpg" alt="" width="300px;">
+      <h2 style="font-size:40px;">I am Lidewij</h2>
+      <p style="font-size:20px;">This is my programming portfolio website</p>
+    </div>
   </section>
   <hr>
   <section id="projects">
-    <h1>Projects</h1>
-    <div class="project-tile"><a href="TributePage/EzioAuditore.html">Go to Tribute Page</a></div><br>
-    <div class="project-tile"><a href="SurveyForm/StardewValley.html">Go to Survey Form</a></div><br>
-    <div class="project-tile"><a href="ProductLandingPage/TinyEagles.html">Go to Product Landing Page</a></div><br>
-    <div class="project-tile"><a href="TechnicalDocumentationPage/CSSAnimationProperties.html">Go to Technical Documentation Page</a></div>
+    <h1>These are my freeCodeCamp projects</h1>
+    <div class="project-tile">
+      <a class="project-tile-link" href="TributePage/EzioAuditore.html">
+        <img class="project-tile-img" src="Tile-TributePage.png">
+        Go to Tribute Page
+      </a>
+    </div>
+    <div class="project-tile">
+      <a class="project-tile-link" href="SurveyForm/StardewValley.html">
+        <img class="project-tile-img" src="Tile-SurveyForm.png">
+        Go to Survey Form
+      </a>
+    </div>
+    <div class="project-tile">
+      <a class="project-tile-link" href="ProductLandingPage/TinyEagles.html">
+        <img class="project-tile-img" src="Tile-ProductLandingPage.png">
+        Go to Product Landing Page
+      </a>
+    </div>
+    <div class="project-tile">
+      <a class="project-tile-link" href="TechnicalDocumentationPage/CSSAnimationProperties.html">
+        <img class="project-tile-img" src="Tile-TechnicalDocumentationPage.png">
+        Go to Technical Documentation Page
+      </a>
+    </div>
+  </section>
+  <hr>
+  <section id="personal-projects">
+    <h1 style="color:#400080;">And these are some of my personal projects</h1>
+    <div class="personal-project-tile">
+      <a class="personal-project-tile-link" href="CSSAnimations/StarrySky.html">
+        <img class="project-tile-img" src="Tile-StarrySky.png">
+        Go to Starry Sky
+      </a>
+    </div>
+    <div class="personal-project-tile">
+      <a class="personal-project-tile-link" href="TaggingGame/TagWolfPhotos.html">
+        <img class="project-tile-img" src="Tile-TagWolfPhotos.png">
+        Go to Tagging Game
+      </a>
+    </div>
   </section>
   <hr>
   <a id="profile-link" href="https://github.com/Wolfvogel">GitHub</a>
