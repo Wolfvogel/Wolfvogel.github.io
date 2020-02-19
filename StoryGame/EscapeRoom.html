@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {background-color: yellow;}
+      nav {background-color: orange;}
+      section {background-color: red;}
+      article {background-color: pink;}
+      footer {background-color: purple;}
+      #optionA {background-color: green;}
+      #optionB {background-color: darkgreen;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Header</p>
+    </header>
+    <nav>
+      <p>Navbar</p>
+    </nav>
+    <section id="gameWindow">
+      <h1>Escape Room</h1>
+        <div id="description">
+          <p id="scenario01">
+            One evening, walking back home from a party, you decide to take a shortcut through the park to get out of the rain quicker.
+            Suddenly the ground beneath you moves, and crumbles. You try to scramble to the side, but the earth gives way and you start falling and sliding down a dark hole.
+            Once you've come to a halt, you wipe some of the dust out of your eyes, and fumble around in your pocket for your phone.
+            As you turn on the flashlight function, you notice that your legs are quickly becoming wet.
+            You look around, and see that the cave-in must have opened up access to an underground body of water.
+            You find yourself in what looks like an cavern, and water is rapidly flowing in. No time to call for help!
+            You see two ways out.
+            To your right there is an opening covered in moss, leading down; or you could try swimming in against the stream to where the water is coming from.
+          </p>
+        </div>
+        <div id="optionA" class="optionButton" onclick="optionA()">
+          <p id="option01A">
+            Swim in against the stream
+          </p>
+        </div>
+        <div id="optionB" class=optionButton onclick="optionB()">
+          <p id="option01B">
+            Climb down moss-covered opening
+          </p>
+        </div>
+      <!--In against stream; manages, lucky she is a strong swimmer, ends up in huge cave with underwater lake that is now draining away. Wait for lake to drain out, find something on lake floor
+    moss opening; slide down, game turns into rush against water-->
+    </section>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+  <script>
+  function optionA(){}
+  function optionB(){}
+    /*
+    OptionA must be clickable
+    OptionB must be clickable
+    When option 1 is clicked, #description must change to Scenario2, optionA must change to option 2A, optionB must change to option 2B
+    When option 2 is clicked, #description must change to Scenario3, optionA must change to option 3A, optionB must change to option 3B
+    So, I need optionA and optionB to be divs of their own, which is clickable.
+    They both hold a seperate div, which holds the specific text; this div gets its class changed based on which option is clicked,
+    and which text is displayed is linked to the class of that div
+
+    So, first I need something that makes the options clickable
+    And sets a different id to description and options when either gets clicked
+    Then something that inputs a different field of text in all those when they have a different id
+    */
+  </script>
+</html>

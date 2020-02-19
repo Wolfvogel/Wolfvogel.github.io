@@ -56,12 +56,12 @@
 
 <script>
 //Click on image = toggle between adding and removing "selected" class, so selected image is highlighted
-var UnselectedImgs = document.getElementsByClassName("unselected");
-var i;
-for (i = 0; i < UnselectedImgs.length; i++) {
-  UnselectedImgs[i].addEventListener("click", function() {
-    this.classList.toggle("selected");
-    this.classList.toggle("unselected");
+var UnselectedImgs = document.getElementsByClassName("unselected"); //Store all elements with class="unselected" in variable UnselectedImg
+var i; //Declare counting variable
+for (i = 0; i < UnselectedImgs.length; i++) { //If counting variable is lower than number of elements in UnselectedImg, add 1 to counting variable
+  UnselectedImgs[i].addEventListener("click", function() { //When an element is clicked
+    this.classList.toggle("selected"); //toggles class to selected (if it is unselected)
+    this.classList.toggle("unselected"); //toggles class to unselected (if it is selected)
   });
 }
 

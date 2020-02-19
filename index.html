@@ -49,8 +49,17 @@
       background-color: #d9b3ff;
       padding-bottom: 20px;
     }
+    #further-links {
+      text-align: center;
+      background-color: #bcf5cb;
+      padding-bottom: 20px;
+    }
+    #profile-link {
+      color: #0a4319;
+      font-weight: 600;
+    }
     .navlink {
-      font-size: 20px;
+      font-size: 17px;
       text-decoration: none;
       color: #0a4319;
       font-weight: 600;
@@ -93,7 +102,10 @@
     .project-tile-link:hover, .personal-project-tile-link:hover {
       text-decoration: underline;
     }
-    /* @media */
+    @media (max-width: 800px) {
+      .project-tile, .personal-project-tile {width: 250px; height: 300px;}
+      .project-tile-img {width: 250px; height: 250px;}
+    }
   </style>
 </head>
 
@@ -103,13 +115,13 @@
       <a class="navlink" href="#welcome">Welcome</a>
       <a class="navlink" href="#projects">freeCodeCamp projects</a>
       <a class="navlink" href="#personal-projects">Personal projects</a>
-      <a class="navlink" href="#profile-link">Further links</a>
+      <a class="navlink" href="#further-links">Further links</a>
     </nav>
   </header>
   <section id="welcome-section">
     <div id="welcome">
-      <h1 style="font-size:70px;color:#0a4319;">Welcome!</h1>
-      <img src="Lidewij.jpg" alt="" width="300px;">
+      <h1 style="font-size:60px;color:#0a4319;">Welcome!</h1>
+      <img src="Lidewij.jpg" alt="" width="250px;">
       <h2 style="font-size:40px;">I am Lidewij</h2>
       <p style="font-size:20px;">This is my programming portfolio website</p>
     </div>
@@ -118,25 +130,25 @@
   <section id="projects">
     <h1>These are my freeCodeCamp projects</h1>
     <div class="project-tile">
-      <a class="project-tile-link" href="TributePage/EzioAuditore.html">
+      <a class="project-tile-link" href="TributePage/EzioAuditore.html" target="_blank">
         <img class="project-tile-img" src="Tile-TributePage.png">
         Go to Tribute Page
       </a>
     </div>
     <div class="project-tile">
-      <a class="project-tile-link" href="SurveyForm/StardewValley.html">
+      <a class="project-tile-link" href="SurveyForm/StardewValley.html" target="_blank">
         <img class="project-tile-img" src="Tile-SurveyForm.png">
         Go to Survey Form
       </a>
     </div>
     <div class="project-tile">
-      <a class="project-tile-link" href="ProductLandingPage/TinyEagles.html">
+      <a class="project-tile-link" href="ProductLandingPage/TinyEagles.html" target="_blank">
         <img class="project-tile-img" src="Tile-ProductLandingPage.png">
         Go to Product Landing Page
       </a>
     </div>
     <div class="project-tile">
-      <a class="project-tile-link" href="TechnicalDocumentationPage/CSSAnimationProperties.html">
+      <a class="project-tile-link" href="TechnicalDocumentationPage/CSSAnimationProperties.html" target="_blank">
         <img class="project-tile-img" src="Tile-TechnicalDocumentationPage.png">
         Go to Technical Documentation Page
       </a>
@@ -146,20 +158,23 @@
   <section id="personal-projects">
     <h1 style="color:#400080;">And these are some of my personal projects</h1>
     <div class="personal-project-tile">
-      <a class="personal-project-tile-link" href="CSSAnimations/StarrySky.html">
+      <a class="personal-project-tile-link" href="CSSAnimations/StarrySky.html" target=_"blank">
         <img class="project-tile-img" src="Tile-StarrySky.png">
         Go to Starry Sky
       </a>
     </div>
     <div class="personal-project-tile">
-      <a class="personal-project-tile-link" href="TaggingGame/TagWolfPhotos.html">
+      <a class="personal-project-tile-link" href="TaggingGame/TagWolfPhotos.html" target="_blank">
         <img class="project-tile-img" src="Tile-TagWolfPhotos.png">
         Go to Tagging Game
       </a>
     </div>
   </section>
   <hr>
-  <a id="profile-link" href="https://github.com/Wolfvogel">GitHub</a>
+  <section id="further-links">
+    <h1 style="color:#0a4319;">Further Links</h1>
+    <p> Have a look at my <a id="profile-link" href="https://github.com/Wolfvogel">GitHub</a> profile </p>
+  </section>
 </body>
 
 </html>
