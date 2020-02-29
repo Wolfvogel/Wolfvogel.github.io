@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;;
+      font-size: 15px;
+    }
+    main {
+      padding-top: 50px;
+    }
+    h2 {
+      padding-top: 40px;
+    }
+    code {
+      background-color: lightgreen;
+    }
+    .navlink {
+      padding: 10px 0px 10px 0px;
+      color: darkgreen;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .navlink:hover {
+      text-decoration: underline;
+    }
+    #navbar {
+      display: flex;
+      justify-content: space-around;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 99.6%;
+      background-color: lightgreen;
+      border-style: solid;
+      border-width: 2px;
+      border-color: darkgreen;
+      border-radius: 5px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <a class="navlink" href="#calculations">Calculations</a>
+    <a class="navlink" href="#strings">Strings</a>
+    <a class="navlink" href="#arrays">Arrays</a>
+    <a class="navlink" href="#functions">Functions</a>
+    <a class="navlink" href="#switch">Switch Statements</a>
+  </nav>
+
+  <main>
+    <h1>Basic JavaScript</h1>
+    <article id="calculations">
+      <h2>
+        Calculations
+      </h2>
+      <p>
+        For adding, subtracting, multiplying and dividing, all the following examples would set variable value to 15;
+      </p>
+      <code>
+        var value = 5 + 10;<br>
+        var value = 20 - 5;<br>
+        var value = 5 * 3;<br>
+        var value = 30 / 2;
+      </code>
+      <p>
+        When a variable has a set value, this can be incremented or decremented by 1, in both of these cases resulting in variable value set to 15;
+      </p>
+      <code>
+        var value = 14;<br>
+        value++;<br><br>
+        var value = 16;<br>
+        value--;
+      </code>
+      <p>
+        It can also have a number added to, subtracted from, divided by or multiplied with it, and then have its value set to the result.
+        There are operators which do this in one step, resulting in the following all resulting in variable value set to 15;
+      </p>
+      <code>
+        var value = 20;<br>
+        value -= 5;<br><br>
+        var value = 11;<br>
+        value += 4;<br><br>
+        var value = 45;<br>
+        value /= 3;<br><br>
+        value = 7.5;<br>
+        value *= 2;
+      </code>
+      <p>
+        The remaining number after dividing two numbers can be found with the remainder operator.
+        It can be used to check for even or odd numbers, by getting the remainder of division by 2.
+        It does not work properly with negative numbers.
+        In this case, variable value would be set to 6;
+      </p>
+      <code>
+        var value = 13 % 7;
+      </code>
+    </article>
+    <article id="strings">
+      <h2>
+        Strings
+      </h2>
+      <p>
+        A series of characters enclosed in (single or double) quotes is called a string.
+        A string is immutable, meaning that once created the individual characters can't just be changed.
+        The only way to change a string, is to assign it with a new string.
+      </p>
+      <code>
+        var string = "Hello";
+      </code>
+      <p>
+        When you need to use a single or double quote inside your string, it can be escaped using a \ so JavaScript knows it's not the end of the string.
+        It's also possible to use single quotes within a string that starts and ends with double quotes, and vice versa.
+      </p>
+      <code>
+        var string = 'I\'m a string';<br>
+        var string = "I'm a string";
+      </code>
+      <p>
+        Other things can be represented in a string by using the backslash escape, like;
+      </p>
+      <p>
+        Backslash: <code>\\</code><br>
+        New line: <code>\n</code><br>
+        Carriage return: <code>\r</code> (Resets to the beginning of a line of text)<br>
+        Tab: <code>\t</code><br>
+        Word boundary: <code>\b</code> (?)<br>
+        Form feed: <code>\f</code> (Advance downwards to the next 'page', used as section separators or page breaks)
+      </p>
+      <p>
+        Strings can be concatenated with +, or concatenated onto the end of an existing string with +=.
+        Concatenating strings does not add spaces between the strings, so make sure to add these yourself where necessary.
+        Strings can also be concatenated with variables.
+      </p>
+      <code>
+        var doubleString = "This is a " + "concatenated string.";<br><br>
+        var doubleString = "This is also a ";<br>
+        doubleString += "concatenated string.";<br><br>
+        var holiday = "Halloween";<br>
+        var longString = "My favourite holiday is " + holiday + ", what is yours?";
+      </code>
+      <p>
+        The length of a string value can be found with .length;
+      </p>
+      <code>
+        var catNameLength = 0;<br>
+        var catName = "Calida";<br>
+        catNameLength = catName.length;
+      </code>
+      <p>
+        It is also possible to find a specific character in a string.
+        For this, remember that computers start counting at 0; the first character in a string is the zeroeth character for your script.
+      </p>
+      <code>
+        var firstLetter = "";<br>
+        var catName = "Calida";<br>
+        firstLetter = catName[0];<br><br>
+        var thirdLetter = "";<br>
+        var catName = "Calida";<br>
+        thirdLetter = catName[2];<br><br>
+        var catName = "Calida";<br>
+        var lastLetter = catName[catName.length - 1];<br><br>
+        var catName = "Calida";<br>
+        var secondToLastLetter = catName[catName.length -2];
+      </code>
+    </article>
+    <article id="arrays">
+      <h2>
+        Arrays
+      </h2>
+      <p>
+        It's possible to store multiple pieces of information in a variable, using an array.
+        An array declaration starts and ends with square brackets, and have a comma between each entry.
+        Arrays can also hold other arrays, called a multi-dimensional array;
+      </p>
+      <code>
+        var pets = ["Cat", 2], "Dog", "Rat", 3]];
+      </code>
+      <p>
+        The data inside an array can be accessed using indexes, which are written in the same bracket notation.
+        Like strings, they start counting at 0.
+      </p>
+      <code>
+        var shoppingList = ["Milk", "Bread", "Eggs"];<br>
+        shoppingList[1]; //equals "Bread"<br><br>
+        var multiArray = [[1, 2, 3], [[4, 5], 6], 7, 8, 9];<br>
+        multiArray[3]; //equals 8<br>
+        multiArray[0]; //equals [1, 2, 3]<br>
+        multiArray[1][0][1]; //equals 5
+      </code>
+      <p>
+        Unlike strings, arrays are mutable and can be changed;
+      </p>
+      <code>
+        var shoppingList = ["Milk", "Bread", "Eggs"];<br>
+        shoppingList[2] = "Jam"; //equals ["Milk", "Bread", "Jam"]
+      </code>
+      <p>
+        Data can be added to the end of an array via the push() function;
+      </p>
+      <code>
+        var array = [1, 2, 3];<br>
+        array.push(4); //array equals [1, 2, 3, 4]
+      </code>
+      <p>
+        The pop() function can be used to remove the last value of an array, and can be used to store that value in a variable.
+      </p>
+      <code>
+        var array = [1, 2, 3];<br>
+        var lastValue = array.pop(); //array equals [1, 2]; lastValue equals 3
+      </code>
+      <p>
+        The shift() function works similar to pop(), except that it removes the first value instead of the last one.
+      </p>
+      <code>
+        var array = [1, 2, 3];<br>
+        var firstValue = array.shift(); //array equals [2, 3]; firstValue equals 1
+      </code>
+      <p>
+        The unshift() function can then be used to add a value to the beginning of an array;
+      </p>
+      <code>
+        var array = [1, 2, 3];<br>
+        array.unshift(0); //equals [0, 1, 2, 3]
+      </code>
+    </article>
+    <article id="functions">
+      <h2>
+        Functions
+      </h2>
+      <p>
+      </p>
+    </article>
+    <article id="switch">
+    <h2>Switch Statements</h2>
+    <p>
+      A switch statement can test a value against many predefined possible cases, using strict comparison (= = =).
+      It executes statements from the first matched case value until it encounters a break.
+      Cases can be chained, when several cases would produce the same return (in the case below, for values 3 and 4).
+      A default statement can be added, which will be executed if no other cases match the input value.
+    </p>
+    <code>
+      function(value) {<br>
+      &nbsp  var answer="";<br>
+      &nbsp  switch (val) {<br>
+      &nbsp&nbsp    case 1: return "one"; break;<br>
+      &nbsp&nbsp    case 2: return 2; break;<br>
+      &nbsp&nbsp    case 3: case 4: return "three or four"; break;<br>
+      &nbsp&nbsp    case "unknown": return "that is not a number"; break;<br>
+      &nbsp&nbsp    default: return "other"; break;<br>
+      &nbsp  }<br>
+      &nbsp  return answer;<br>
+      }
+    </code>
+  </article>
+  </main>
+</body>
