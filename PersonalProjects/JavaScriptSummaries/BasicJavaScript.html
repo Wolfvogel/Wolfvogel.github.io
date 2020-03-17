@@ -46,7 +46,10 @@
     <a class="navlink" href="#strings">Strings</a>
     <a class="navlink" href="#arrays">Arrays</a>
     <a class="navlink" href="#functions">Functions</a>
-    <a class="navlink" href="#switch">Switch Statements</a>
+    <a class="navlink" href="#comparisons">Comparisons</a>
+    <a class="navlink" href="#ifElseIf">If and Else If</a>
+    <a class="navlink" href="#switch">Switch</a>
+    <a class="navlink" href="#objects">Objects</a>
   </nav>
 
   <main>
@@ -56,7 +59,7 @@
         Calculations
       </h2>
       <p>
-        For adding, subtracting, multiplying and dividing, all the following examples would set variable value to 15;
+        For adding, subtracting, multiplying and dividing, all the following examples would declare a <i>variable</i> named value, then set it to 15;
       </p>
       <code>
         var value = 5 + 10;<br>
@@ -65,7 +68,7 @@
         var value = 30 / 2;
       </code>
       <p>
-        When a variable has a set value, this can be incremented or decremented by 1, in both of these cases resulting in variable value set to 15;
+        When a <i>variable</i> has a set value, this can be incremented or decremented by 1, in both of these cases resulting in <i>variable</i> value set to 15;
       </p>
       <code>
         var value = 14;<br>
@@ -75,7 +78,7 @@
       </code>
       <p>
         It can also have a number added to, subtracted from, divided by or multiplied with it, and then have its value set to the result.
-        There are operators which do this in one step, resulting in the following all resulting in variable value set to 15;
+        There are <i>operators</i> which do this in one step, resulting in the following all resulting in <i>variable</i> value set to 15;
       </p>
       <code>
         var value = 20;<br>
@@ -88,10 +91,10 @@
         value *= 2;
       </code>
       <p>
-        The remaining number after dividing two numbers can be found with the remainder operator.
-        It can be used to check for even or odd numbers, by getting the remainder of division by 2.
+        The remaining number after dividing two numbers can be found with the <i>remainder</i> operator.
+        It can be used to check for even or odd numbers, by getting the <i>remainder</i> of division by 2.
         It does not work properly with negative numbers.
-        In this case, variable value would be set to 6;
+        In this case, <i>variable</i> value would be set to 6;
       </p>
       <code>
         var value = 13 % 7;
@@ -102,23 +105,23 @@
         Strings
       </h2>
       <p>
-        A series of characters enclosed in (single or double) quotes is called a string.
-        A string is immutable, meaning that once created the individual characters can't just be changed.
-        The only way to change a string, is to assign it with a new string.
+        A series of characters enclosed in (single or double) quotes is called a <i>string</i>.
+        A <i>string</i> is immutable, meaning that once created the individual characters can't just be changed.
+        The only way to change a <i>string</i>, is to assign it with a new <i>string</i>.
       </p>
       <code>
         var string = "Hello";
       </code>
       <p>
-        When you need to use a single or double quote inside your string, it can be escaped using a \ so JavaScript knows it's not the end of the string.
-        It's also possible to use single quotes within a string that starts and ends with double quotes, and vice versa.
+        When you need to use a single or double quote inside your <i>string</i>, it can be escaped using a \ so JavaScript knows it's not the end of the <i>string</i>.
+        It's also possible to use single quotes within a <i>string</i> that starts and ends with double quotes, and vice versa.
       </p>
       <code>
         var string = 'I\'m a string';<br>
         var string = "I'm a string";
       </code>
       <p>
-        Other things can be represented in a string by using the backslash escape, like;
+        Other things can be represented in a <i>string</i> by using the backslash escape, like;
       </p>
       <p>
         Backslash: <code>\\</code><br>
@@ -129,9 +132,9 @@
         Form feed: <code>\f</code> (Advance downwards to the next 'page', used as section separators or page breaks)
       </p>
       <p>
-        Strings can be concatenated with +, or concatenated onto the end of an existing string with +=.
-        Concatenating strings does not add spaces between the strings, so make sure to add these yourself where necessary.
-        Strings can also be concatenated with variables.
+        <i>Strings</i> can be concatenated with +, or concatenated onto the end of an existing <i>string</i> with +=.
+        Concatenating <i>strings</i> does not add spaces between the <i>strings</i>, so make sure to add these yourself where necessary.
+        <i>Strings</i> can also be concatenated with variables.
       </p>
       <code>
         var doubleString = "This is a " + "concatenated string.";<br><br>
@@ -141,7 +144,7 @@
         var longString = "My favourite holiday is " + holiday + ", what is yours?";
       </code>
       <p>
-        The length of a string value can be found with .length;
+        The length of a <i>string</i> value can be found with <i>.length</i>;
       </p>
       <code>
         var catNameLength = 0;<br>
@@ -149,8 +152,8 @@
         catNameLength = catName.length;
       </code>
       <p>
-        It is also possible to find a specific character in a string.
-        For this, remember that computers start counting at 0; the first character in a string is the zeroeth character for your script.
+        It is also possible to find a specific character in a <i>string</i>.
+        For this, remember that computers start counting at 0; the first character in a <i>string</i> is the zeroeth character for your script.
       </p>
       <code>
         var firstLetter = "";<br>
@@ -170,16 +173,16 @@
         Arrays
       </h2>
       <p>
-        It's possible to store multiple pieces of information in a variable, using an array.
-        An array declaration starts and ends with square brackets, and have a comma between each entry.
-        Arrays can also hold other arrays, called a multi-dimensional array;
+        It's possible to store multiple pieces of information in a <i>variable</i>, using an <i>array</i>.
+        An <i>array</i> declaration starts and ends with square brackets, and have a comma between each entry.
+        <i>Arrays</i> can also hold other <i>arrays</i>, called a <i>multi-dimensional array</i>;
       </p>
       <code>
         var pets = ["Cat", 2], "Dog", "Rat", 3]];
       </code>
       <p>
-        The data inside an array can be accessed using indexes, which are written in the same bracket notation.
-        Like strings, they start counting at 0.
+        The data inside an <i>array</i> can be accessed using <i>indexes</i>, which are written in the same bracket notation.
+        Like <i>strings</i>, they start counting at 0.
       </p>
       <code>
         var shoppingList = ["Milk", "Bread", "Eggs"];<br>
@@ -190,35 +193,35 @@
         multiArray[1][0][1]; //equals 5
       </code>
       <p>
-        Unlike strings, arrays are mutable and can be changed;
+        Unlike <i>strings</i>, <i>arrays</i> are mutable and can be changed;
       </p>
       <code>
         var shoppingList = ["Milk", "Bread", "Eggs"];<br>
         shoppingList[2] = "Jam"; //equals ["Milk", "Bread", "Jam"]
       </code>
       <p>
-        Data can be added to the end of an array via the push() function;
+        Data can be added to the end of an <i>array</i> via the <i>push()</i> function;
       </p>
       <code>
         var array = [1, 2, 3];<br>
         array.push(4); //array equals [1, 2, 3, 4]
       </code>
       <p>
-        The pop() function can be used to remove the last value of an array, and can be used to store that value in a variable.
+        The <i>pop()</i> function can be used to remove the last value of an <i>array</i>, and can be used to store that value in a <i>variable</i>.
       </p>
       <code>
         var array = [1, 2, 3];<br>
         var lastValue = array.pop(); //array equals [1, 2]; lastValue equals 3
       </code>
       <p>
-        The shift() function works similar to pop(), except that it removes the first value instead of the last one.
+        The <i>shift()</i> function works similar to <i>pop()</i>, except that it removes the first value instead of the last one.
       </p>
       <code>
         var array = [1, 2, 3];<br>
         var firstValue = array.shift(); //array equals [2, 3]; firstValue equals 1
       </code>
       <p>
-        The unshift() function can then be used to add a value to the beginning of an array;
+        The <i>unshift()</i> function can then be used to add a value to the beginning of an <i>array</i>;
       </p>
       <code>
         var array = [1, 2, 3];<br>
@@ -230,29 +233,248 @@
         Functions
       </h2>
       <p>
+        <i>Functions</i> are reusable parts of JavaScript code that can be invoked by using its name,
+        at which point all of the code between the curled braces will be executed.
+      </p>
+      <code>
+        function greetings() {<br>
+          &nbsp console.log("Hello World");<br>
+        }<br>
+        greetings(); //Outputs "Hello World"
+      </code>
+      <p>
+        When defining a <i>function</i>, one or more <i>parameters</i> can be defined along with it.
+        <i>Parameters</i> act as placeholders, for the values that will be input into the <i>function</i> when it is called.
+      </p>
+      <code>
+        function subtraction(a, b) {<br>
+          &nbsp console.log(a - b);<br>
+        }<br>
+        subtraction(15, 2); //Outputs 13<br>
+        subtraction(30, 10); //Outputs 20
+      </code>
+      <p>
+        <i>Variables</i> declared within a <i>function</i>, and the <i>function parameters</i>, are created with a <i>local scope</i> - meaning they are only visible within that <i>function</i>.
+        It is possible to create both <i>local</i> and <i>global variables</i> with the same name, in which case the <i>local variable</i> always takes precedence.
+      </p>
+      <code>
+        var animal = "Elephant";<br>
+        function favoriteAnimal() {<br>
+          &nbsp var animal = "Giraffe";<br>
+          &nbsp return animal;<br>
+        } //Outputs "Giraffe"<br>
+      </code>
+      <p>
+        Where values can be passed into a <i>function</i> with <i>arguments</i>, or <i>parameters</i>, a <i>return</i> statement can be used to send a value back out of a <i>function</i>.
+      </p>
+      <code>
+        var timesFive(number) {<br>
+          &nbsp return number * 5;<br>
+        }<br>
+        var result = timesFive(2); //Outputs 10<br>
+        var result = timesFive(6); //Outputs 30<br>
+      </code>
+      <p>
+        When a <i>function</i> does not have a <i>return</i> statement, upon being called it processes the inner code, but the returned value is <i>undefined</i>.
+      </p>
+      <code>
+        var sum = 0;<br>
+        function addSum(num) {<br>
+          sum = sum + num;<br>
+        }<br>
+        addSum(5)//Sum is modified, but returned value is undefined
+      </code>
+    </article>
+    <article id="comparisons">
+      <h2>Comparisons</h2>
+      <p>
+        There are many comparison operators in JavaScript, which all return a boolean true or false value.
+        <ul>
+          <li>
+            <i>Equality</i> operator (==) Compares two values and returns true if they're equivalent<br>
+            &nbsp (3 == '3' // true)
+          </li><br>
+          <li>
+            <i>Strict equality</i> operator (===) Compares two values and returns true if they're exactly equal, without attempting to convert both values to a common type<br>
+            &nbsp (3 === 3 // true)
+          </li><br>
+          <li>
+            <i>Inequality</i> operator (!=) Compares two values and returns true if they're not equivalent.<br>
+            &nbsp (3 != 4) // true<br>
+            &nbsp (3 != '3' // false)
+          </li><br>
+          <li>
+            <i>Strict inequality</i> operator (!==) Compares two values and returns true if they're not exactly equal, without attempting to convert both values to a common type<br>
+            &nbsp (3 !== '3' // true)<br>
+            &nbsp (3 !== 3) // false
+          </li><br>
+          <li>
+            <i>Greater than</i> operator (>) Compares two numbers, and returns true if the number on the left is greater than the number on the right.
+            It will also convert data types when comparing.<br>
+            &nbsp (3 > '2' // true)<br>
+            &nbsp (3 > 3 // false)
+          </li><br>
+          <li>
+            <i>Greater than or equal to</i> operator (>=) Compares two numbers, and returns true if the number on the left is greater than or equal to the number on the right.
+            It will also convert data types when comparing.<br>
+            &nbsp (3 >= '3' // true)<br>
+            &nbsp (1 >= 3 // false)
+          </li><br>
+          <li>
+            <i>Less than</i> operator (<) Compares two numbers, and returns true if the number to the left is less than the number on the right.
+            It will also convert data types when comparing.<br>
+            &nbsp (3 < '4' // true)<br>
+            &nbsp (3 < 2 // false)
+          </li><br>
+          <li>
+            <i>Less than or equal to</i> operator (<=) Compares two numbers, and return true if the number on the left is less than or equal to the number on the right.
+            It will also convert data types when comparing.<br>
+            &nbsp (3 <= '3' // true)<br>
+            &nbsp (3)
+        </ul>
+        The <i>typeof</i> operator can be used to determine the type of a variable or value (typeof 3 returns number, typeof '3' returns string).
       </p>
     </article>
+    <article id="ifElseIf">
+      <h2>If and Else If</h2>
+      <p>
+        The <i>if</i> statement is used to execute code when certain conditions, defined in parentheses, are met.
+        These are called <i>boolean conditions</i>, and can only be <i>true</i> or <i>false</i>.
+        When the <i>boolean condition</i> comes to <i>true</i>, the code in the curled braces is executed and the result is returned, bypassing the rest of the <i>function</i>.
+        When the <i>boolean condition</i> comes to <i>false</i>, the code in the curled braces is not executed, and the <i>function</i> continues.<br>
+      </p>
+      <code>
+        function test (condition) {<br>
+          &nbsp if (condition == 5) {<br>
+            &nbsp &nbsp return "Equal";<br>
+          &nbsp }<br>
+          &nbsp return "Not equal";<br>
+        }<br>
+        //Returns Equal when boolean condition is true (5 == 5 / '5' == 5)<br>
+        //Returns Not equal when boolean condition is false (1 == 5)
+      </code>
+      <p>
+        With the <i>logical and</i> operator (&&) it is possible to test multiple things at the same time.
+        It returns true only if the both of the <i>operanders</i> next to it are true.
+      </p>
+      <code>
+        function 3to6 {<br>
+          &nbsp if (num > 3 && num < 6) {<br>
+            &nbsp &nbsp return "Yes";<br>
+          &nbsp }<br>
+          &nbsp return "No";<br>
+        }<br>
+        // Returns "Yes" if num is greater than 3 but less than 6, and "No" if it is 3 or less, or 6 and greater.
+      </code>
+      <p>
+        The <i>logical or</i> operator returns true if either of the <i>operanders</i> next to it is true.
+      </p>
+      <code>
+        function 3or9 {<br>
+          &nbsp if num === 3 || num === 9 {<br>
+            &nbsp &nbsp return "Yes";<br>
+          &nbsp }<br>
+          &nbsp return "No";<br>
+        }<br>
+        // Returns "Yes" if num is exactly equal to 3 or 9, and "No" if it is anything else.
+      </code>
+      <p>
+        When a condition for an <i>if</i> statement is true, it's code is executred.
+        When the condition is false, normally nothing happens.
+        With an <i>else</i> statement, an alternate block of code can be executed.
+        If multiple conditions need to be addressed, <i>if</i> statements can be chained used <i>else if</i> statements.
+        The function if executed from top to bottom, so you need to take care which statements come first.
+      </p>
+      <code>
+        function threeOrNot(num) {<br>
+          &nbsp if (num > 3) {<br>
+            &nbsp &nbsp return "Bigger than 3";<br>
+          &nbsp } else if (num == 3) {<br>
+            &nbsp &nbsp return "3";<br>
+          &nbsp } else {<br>
+            &nbsp &nbsp return "Less than 3";<br>
+          &nbsp }<br>
+        }
+      </code>
+      <p>
+        To return a boolean true or false value, instead of using an <i>if/else</i> statement, it's often shorter to use a <i>strict equality</i> operator.
+      </p>
+      <code>
+        function isEqual(a,b) {<br>
+          &nbsp if (a === b) {<br>
+            &nbsp &nbsp return true;<br>
+          &nbsp } else {<br>
+            &nbsp &nbsp return false;<br>
+          &nbsp }<br>
+        }<br>
+        // Can also be written as;<br><br>
+        function isEqual(a,b) {<br>
+          &nbsp return a === b;<br>
+        }
+    </article>
     <article id="switch">
-    <h2>Switch Statements</h2>
-    <p>
-      A switch statement can test a value against many predefined possible cases, using strict comparison (= = =).
-      It executes statements from the first matched case value until it encounters a break.
-      Cases can be chained, when several cases would produce the same return (in the case below, for values 3 and 4).
-      A default statement can be added, which will be executed if no other cases match the input value.
-    </p>
-    <code>
-      function(value) {<br>
-      &nbsp  var answer="";<br>
-      &nbsp  switch (val) {<br>
-      &nbsp&nbsp    case 1: return "one"; break;<br>
-      &nbsp&nbsp    case 2: return 2; break;<br>
-      &nbsp&nbsp    case 3: case 4: return "three or four"; break;<br>
-      &nbsp&nbsp    case "unknown": return "that is not a number"; break;<br>
-      &nbsp&nbsp    default: return "other"; break;<br>
-      &nbsp  }<br>
-      &nbsp  return answer;<br>
-      }
-    </code>
-  </article>
+      <h2>Switch Statements</h2>
+      <p>
+        A <i>switch</i> statement can test a value against many predefined possible cases, using strict comparison (===).
+        It executes statements from the first matched case value until it encounters a break.
+        Cases can be chained, when several cases would produce the same return (in the case below, for values 3 and 4).
+        A default statement can be added, which will be executed if no other cases match the input value.
+      </p>
+      <code>
+        function(value) {<br>
+        &nbsp  var answer="";<br>
+        &nbsp  switch (val) {<br>
+        &nbsp&nbsp    case 1: return "one"; break;<br>
+        &nbsp&nbsp    case 2: return 2; break;<br>
+        &nbsp&nbsp    case 3: case 4: return "three or four"; break;<br>
+        &nbsp&nbsp    case "unknown": return "that is not a number"; break;<br>
+        &nbsp&nbsp    default: return "other"; break;<br>
+        &nbsp  }<br>
+        &nbsp  return answer;<br>
+        }
+      </code>
+    </article>
+    <article id="objects">
+      <h2>Objects</h2>
+      <p>
+        <i>Objects</i> are similar to <i>arrays</i>, except data is accessed through <i>properties</i> instead of by using indexes.
+        They are useful for storing data in a structured way.
+        The properties ("name", "colours", etc) can be stored as strings, but numbers can also be used as properties,
+        and for single-word string properties the quotes can even be omitted.
+      </p>
+      <code>
+        var unicorn ={<br>
+          &nbsp name: "Moonshine",<br>
+          &nbsp "main colours": ["Blue", "White", "Lilac", "Silver"],<br>
+          &nbsp legs: 4,<br>
+          &nbsp horn: 1<br>
+        };
+      </code>
+      <p>
+        The properties of an objects can be accessed via dot notation (.) and bracket notation ([]).
+        Dot notation is used when you know the name of the property you're trying to access, and it's a number or a one-word string.
+        For properties with a space in the name, bracket notation is used. This can also be used on object properties without spaces.
+      </p>
+      <code>
+        var unicornName = unicorn.name; // "Moonshine" <br>
+        var unicornColours = unicorn["main colours"]; // ["Blue", "White", "Lilac", "Silver"]
+      </code>
+      <p>
+        It's also possible to access an object property by using variables.
+        This can be useful when accessing a lookup table
+      </p>
+      <code>
+        var plushies = {
+          Charlie: "Red panda",
+          Mini: "Spider",
+          Hinnik: "Horse"
+        };
+        var myPlushie = "Charlie";
+        var whatSpecies = plushies[myPlushie];
+        console.log(whatSpecies); // "Red panda"
+      </code>
+      <p>
+        (continue with Updating Object Properties)
+      </p>
   </main>
 </body>
