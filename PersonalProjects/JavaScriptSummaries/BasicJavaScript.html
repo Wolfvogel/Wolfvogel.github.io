@@ -464,17 +464,32 @@
         This can be useful when accessing a lookup table
       </p>
       <code>
-        var plushies = {
-          Charlie: "Red panda",
-          Mini: "Spider",
-          Hinnik: "Horse"
-        };
-        var myPlushie = "Charlie";
-        var whatSpecies = plushies[myPlushie];
+        var plushies = {<br>
+          &nbsp Charlie: "Red panda",<br>
+          &nbsp Mini: "Spider",<br>
+          &nbsp Hinnik: "Horse"<br>
+        };<br>
+        var myPlushie = "Charlie";<br>
+        var whatSpecies = plushies[myPlushie];<br>
         console.log(whatSpecies); // "Red panda"
       </code>
       <p>
-        (continue with Updating Object Properties)
+        The properties of an object can be changed, just like a variable, using either dot or bracket notation.
+        Additionally, it is possible to add new properties to an object, or to remove properties.
       </p>
+      <code>
+        plushies.Mini = "Large Spider";<br>
+        // Changes the above object's Mini property to "Large Spider"<br><br>
+        plushies["Om"] = "Cat";<br>
+        // Adds the Om property to the plushies object, and sets it to "Cat"<br><br>
+        delete plushies.Hinnik;<br>
+        // Deletes the Hinnik property from the plushies object
+      </code>
+      <p>
+        It's possible to check if an object has a specific property;
+      </p>
+      <code>
+        plushies.hasOwnProperty("Charlie";) // true
+        plushies.hasOwnProperty("Bella"); // false
   </main>
 </body>
