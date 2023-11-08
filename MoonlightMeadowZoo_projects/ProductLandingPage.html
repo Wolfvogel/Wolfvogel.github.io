@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Photography Workshops - Moonlight Meadow Zoo
+    </title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="RoanneRoams"/>
+    <meta name="description" content="Moonlight Meadow Zoo organizes photography workshops, under guidance of our own professional photographer."/>
+    <meta name="keywords" content="Moonlight Meadow Zoo photo photography photoworkshop workshop picture learning teaching course photocourse photographyworkshop photographycourse"/>
+    <link rel="stylesheet" href="MoonlightMeadowZoo_Styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Send+Flowers"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sevillana"/>
+    <style>
+      :root {
+        --darkest-color: #002233;
+        --middle-dark-color: #00334d;
+        --middle-color: #397ea1;
+        --middle-light-color: #80d4ff;
+        --lightest-color: #b3e6ff;
+        --off-gray-color: #c9dee899;
+      }
+
+      /*Navigation bar*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        background-color: var(--middle-dark-color);
+        border-bottom: 2px solid var(--lightest-color);
+      }
+      .logo_and_name {
+        display: flex;
+        padding-top: 10px;
+      }
+      #header-img {
+        height: 4.5rem;
+        width: auto;
+        padding: 0.5rem 0.5rem 0 1.5rem;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+      }
+      main {
+        position: relative;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      /*The rest of the page*/
+      video {
+        display: block;
+        margin: 2rem auto;
+      }
+      form {
+        margin-top: 2rem;
+      }
+      li, #select_workshop {
+        padding: 0.5rem 0;
+      }
+      input[type="email"] {
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 1150px) { /*Navigation bar styling on normal-width screens*/
+        html {
+          scroll-padding-top: 80px;
+        }
+        header {
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-align: center;
+        }
+        .logo_and_name {
+          width: 45%;
+        }
+        nav {
+          width: 55%;
+          justify-content: space-around;
+        }
+        nav a {
+          padding: 0 2rem;
+        }
+        main {
+          top: 80px;
+        }
+      }
+      @media (min-width: 600px) and (max-width: 1150px) { /*Navigation barstyling on smaller screens*/
+        html {
+          scroll-padding-top: 190px;
+        }
+        header {
+          height: 190px;
+        }
+        .logo_and_name {
+          justify-content: center;
+        }
+        nav {
+          flex-direction: column;
+        }
+        nav a {
+          padding: 0.1rem 0;
+        }
+        main {
+          top: 190px;
+        }
+      }
+      @media (max-width: 600px) { /*Navigation bar styling on very small screens*/
+        html {
+          scroll-padding-top: 180px;
+        }
+        header {
+          height: 180px;
+        }
+        .logo_and_name {
+          justify-content: center;
+        }
+        nav {
+          flex-direction: column;
+        }
+        nav a {
+          padding: 0.1rem 0;
+        }
+        main {
+          top: 180px;
+        }
+        h1, h2 {
+          font-size: 4rem;
+        }
+        h3 {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo_and_name">
+        <img id="header-img" src="MoonlightMeadowZoo_logo.png"/>
+        <h1 class="navigation_bar_name">Moonlight Meadow Zoo</h1>
+      </div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="#photography_workshops_title">Photography workshops</a>
+        <a class="nav-link" href="#practical_information_title">Practical information</a>
+        <a class="nav-link" href="#requirements_title">Requirements</a>
+        <a class="nav-link" href="#good_to_know_title">Good to know</a>
+        <a class="nav-link" href="#sign_up_title">Sign up</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="photography_workshops_title">Photography workshops</h2>
+      <p id="introduction">
+        The Moonlight Meadow zoo regularly organizes photography workshops. In these workshops, our photographer will take you along on an informative adventure through the zoo. You will discover the best photography spots in the zoo, get to see some behind-the-scenes locations, and get plenty of tips and tricks along the way.
+      </p>
+      <video id="video" width="100%" height="auto" controls>
+        <source src="" type=""/>
+        Your browser does not support this video.
+      </video>
+      <h3 id="practical_information_title">Practical information</h3>
+      <ul>
+        <li>The price for a photography workshop is €40,- per person, excluding entrance to the zoo.</li>
+        <li>Participants should make sure to gather in the Moonlight Meadow Restaurant 15 minutes before the workshop starts.</li>
+        <li>The workshop will take 3 hours (10:00 - 13:00).</li>
+        <li>The workshop will start with coffee and/or tea, and a short explanation of what you will be doing.</li>
+      </ul>
+      <h3 id="requirements_title">Requirements</h3>
+      <ul>
+        <li>The minimum age to participate in the workshop is 16 years.</li>
+        <li>While these workshops are accessible for both experienced and beginning photographers, it is advised to have some basic knowledge of how your camera works.</li>
+        <li>You will need to bring an SLR camera, a compact camera, or a mirrorless camera.</li>
+        <li>If you do not have a Moonlight Meadow Zoo season pass, you will need a separate entrance ticket to participate in the workshop, as this is not included in the workshop price.</li>
+      </ul>
+      <h3 id="good_to_know_title">Good to know</h3>
+      <ul>
+        <li>There are 15 participant spots per workshop.</li>
+        <li>A minimum of 8 participants is required for the workshop to proceed as planned.</li>
+        <li>If a workshop has to be cancelled, people who signed up will be approached by Moonlight Meadow Zoo.</li>
+      </ul>
+      <h3 id="sign_up_title">Sign up</h3>
+      <p id="select_workshop">Select a workshop below to sign up:</p>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+        <p>
+          Unfortunately, it is currently not possible to sign up for a workshop.<br/><br/>
+          Enter your e-mail address to be notified when a new workshop has been planned:
+        </p>
+        <input id="email" type="email" name="email" placeholder="Email..."/>
+        <input id="submit" type="submit"/>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Survey form for Visitors - Moonlight Meadow Zoo
+    </title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="RoanneRoams"/>
+    <meta name="description" content="A survey form for visitors to the Moonlight Meadow Zoo"/>
+    <meta name="keywords" content="Moonlight Meadow Zoo survey form questionnaire visitor visitors animal animals park"/>
+    <link rel="stylesheet" href="MoonlightMeadowZoo_Styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Send+Flowers"/>
+    <style>
+      :root {
+        --darkest-color: #002233;
+        --middle-dark-color: #00334d;
+        --middle-color: #397ea1;
+        --middle-light-color: #80d4ff;
+        --lightest-color: #b3e6ff;
+        --off-gray-color: #c9dee899;
+      }
+      #title {
+        padding: 1.5rem 0 1.5rem 0;
+      }
+      #description {
+        margin: 2rem 0 3rem 0;
+      }
+      #improvements_label {
+        margin: 2rem 0 0 0;
+      }
+      #improvements {
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">
+      Moonlight Meadow Zoo
+    </h1>
+    <h2>
+      Survey form for visitors
+    </h2>
+    <p id="description">
+      This is a survey form for people who have visited Moonlight Meadow Zoo in the past year. The gathered information may be used to improve our zoo.
+    </p>
+    <form id="survey-form" action="mailto:moonlightmeadowzoo@gmail.com" method="post">
+      <label id="name-label" for="name">
+        Enter your name:
+        <input id="name" type="text" placeholder="Name..." name="name" required/>
+      </label>
+      <label id="email-label" for="email">
+        Enter your e-mail address:
+        <input id="email" type="email" placeholder="Email..." name="email" required/>
+      </label>
+      <label id="age_group_label" for="age">
+        What is your age group?
+        <select id="age_group" name="Age-group" required>
+          <option value="Age-blanco" selected disabled>
+            Select an age group:
+          </option>
+          <option value="12-and-younger">
+            12 years and younger
+          </option>
+          <option value="13-18">
+            13 - 18 years
+          </option>
+          <option value="19-25">
+            19 - 25 years
+          </option>
+          <option value="26-35">
+            26 - 35 years
+          </option>
+          <option value="36-45">
+            36 - 45 years
+          </option>
+          <option value="46-55">
+            46 - 55 years
+          </option>
+          <option value="56-65">
+            56 - 65 years
+          </option>
+          <option value="66-75">
+            66 - 75 years
+          </option>
+          <option value="76-and-older">
+            76 years and older
+          </option>
+        </select>
+      </label>
+      <hr/>
+      <label id="dropdown-label" for="dropdown">
+        Where do you live?
+        <select id="dropdown" name="Residence" required>
+          <option value="Residence-blanco" selected disabled>
+            Select a location:
+          </option>
+          <option value="Drenthe">
+            Drenthe
+          </option>
+          <option value="Flevoland">
+            Flevoland
+          </option>
+          <option value="Friesland">
+            Friesland
+          </option>
+          <option value="Gelderland">
+            Gelderland
+          </option>
+          <option value="Groningen">
+            Groningen
+          </option>
+          <option value="Limburg">
+            Limburg
+          </option>
+          <option value="North-Brabant">
+            North Brabant
+          </option>
+          <option value="North-Holland">
+            North Holland
+          </option>
+          <option value="Overijssel">
+            Overijssel
+          </option>
+          <option value="South-Holland">
+            South Holland
+          </option>
+          <option value="Utrecht">
+            Utrecht
+          </option>
+          <option value="Zeeland">
+            Zeeland
+          </option>
+          <option value="Belgium">
+            Belgium
+          </option>
+          <option value="Germany">
+            Germany
+          </option>
+          <option value="Other">
+            Other
+          </option>
+          <option value="Prefer not to say">
+            Prefer not to say
+          </option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>
+          How do you travel to Moonlight Meadow Zoo? (Multiple answers possible)
+        </legend>
+        <label for="travel_public_transport">
+          <input id="travel_public_transport" type="checkbox" name="Travel" value="PublicTransport"/>
+          By public transport
+        </label>
+        <label for="travel_car">
+          <input id="travel_car" type="checkbox" name="Travel" value="Car"/>
+          By car
+        </label>
+        <label for="travel_bicycle">
+          <input id="travel_bicycle" type="checkbox" name="Travel" value="Bicycle"/>
+          By bicycle
+        </label>
+        <label for="travel_foot">
+          <input id="travel_foot" type="checkbox" name="Travel" value="Foot"/>
+          By foot
+        </label>
+        <label for="travel_other">
+          <input id="travel_other" type="checkbox" name="Travel" value="Other"/>
+          Other
+        </label>
+      </fieldset>
+      <hr/>
+      <label id="number-label" for="number">
+        How many times have you visited Moonlight Meadow Zoo in the last year?
+        <input id="number" type="number" placeholder="0" name="number" min="0" max="356"/>
+      </label>
+      <fieldset>
+        <legend>
+          Do you have a season pass?
+        </legend>
+        <label for="season_pass_yes">
+          <input id="season_pass_yes" type="radio" name="Season-pass" value="Yes"/>
+          Yes
+        </label>
+        <label for="season_pass_no">
+          <input id="season_pass_no" type="radio" name="Season-pass" value="No"/>
+          No
+        </label>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>
+          What are your favourite sections in Moonlight Meadow Zoo?
+        </legend>
+        <label for="desert_oasis">
+          <input id="desert_oasis" type="checkbox" name="ZooSection" value="DesertOasis"/>
+          Desert Oasis
+        </label>
+        <label for="sunset_savannah">
+          <input id="sunset_savannah" type="checkbox" name="ZooSection" value="SunsetSavannah"/>
+          Sunset Savannah
+        </label>
+        <label for="ocean">
+          <input id="ocean" type="checkbox" name="ZooSection" value="Ocean"/>
+          Underwater Adventure
+        </label>
+        <label for="rainforest">
+          <input id="rainforest" type="checkbox" name="ZooSection" value="Rainforest"/>
+          Rainforest
+        </label>
+        <label for="boreal_forest">
+          <input id="boreal_forest" type="checkbox" name="ZooSection" value="BorealForest"/>
+          Boreal Forest
+        </label>
+      </fieldset>
+      <label id="improvements_label" for="improvements">
+        What kind of improvements would you like to see in Moonlight Meadow Zoo?
+        <textarea id="improvements" name="Improvements" rows="8" cols="30" placeholder="Type here..."></textarea>
+      </label>
+      <button type="submit" id="submit">
+        Submit
+      </button>
+    </form>
+
+  </body>
+</html>

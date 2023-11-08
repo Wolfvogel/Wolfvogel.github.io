@@ -1,0 +1,171 @@
+/*Page-wide styling*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 10px;
+}
+:root {
+  --darkest-color: #002233;
+  --middle-dark-color: #00334d;
+  --middle-color: #397ea1;
+  --middle-light-color: #80d4ff;
+  --lightest-color: #b3e6ff;
+  --off-gray-color: #c9dee899;
+}
+
+/*Specifying font sizes and styles*/
+h1 { /*This one is used just for the Moonlight Meadow Zoo name that should be at the top of every page*/
+  font-size: 5rem;
+  font-family: "Great Vibes", Verdana, sans-serif;
+  background: -webkit-linear-gradient(#b3e6ff, #397ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2, h3, h4, h5, h6 {
+  font-family: "Send Flowers";
+  font-weight: normal;
+}
+h2 {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(#b3e6ff, #397ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: solid 3px var(--middle-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 4.5rem;
+  border-bottom: 1px solid var(--lightest-color);
+  padding: 1.5rem 0 0.5rem 0;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 4rem;
+}
+h5 {
+  font-size: 3.5rem;
+}
+h6 {
+  font-size: 3rem;
+}
+p, ul, ol, li, a, button {
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+figcaption {
+  font-size: 1.4rem;
+}
+
+/*Generic styling*/
+body {
+  background-color: var(--darkest-color);
+}
+body, a, figcaption {
+  color: var(--lightest-color);
+}
+a:hover {
+  color: var(--middle-light-color);
+}
+img, button {
+  border-radius: 5px;
+}
+h1, h2, h3, h4, h5, h6, p, figcaption {
+  text-align: center;
+}
+body {
+  margin: 0 auto;
+  width: 80vw;
+  min-width: 400px;
+  max-width: 1000px;
+}
+button:hover {
+  background-color: var(--middle-light-color);;
+  cursor: pointer;
+}
+hr {
+  background-color: var(--off-gray-color); /*Off-gray colour*/
+  border: 1px solid var(--off-gray-color);
+  margin: 3rem 0 3rem 0;
+}
+
+/*Form-specific styling*/
+form, label, fieldset, legend {
+  font-size: 1.6rem;
+}
+label {
+  display: block;
+}
+::placeholder, select, option, input {
+  font-size: 1.4rem;
+}
+form {
+  background-color: var(--middle-dark-color); /*Lightest background colour*/
+  padding: 1.8rem 1.5rem 2rem 1.5rem;
+  margin-bottom: 1rem;
+}
+input, select, textarea {
+  background-color: var(--darkest-color);
+}
+form, input, fieldset, textarea, select {
+  border-radius: 5px;
+}
+textarea {
+  color: var(--lightest-color); /*Lightest text colour*/
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 0.8rem 0.6rem 0 1.2rem;
+}
+input[type="email"], input[type="text"], input[type="number"] {
+  display: block;
+  color: var(--off-gray-color);
+  margin: 0.5rem auto 1.4rem auto;
+  padding: 0.2rem 0;
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+  border-top: 2px solid var(--darkest-color);
+  border-bottom: 2px solid var(--darkest-color);
+  padding-left: 7px;
+}
+select {
+  display: block;
+  border: 2px solid var(--darkest-color);
+  color: var(--off-gray-color);
+  margin: 0.5rem auto 1.4rem auto;
+  padding: 0.2rem 0;
+  width: 100%;
+}
+textarea {
+  display: block;
+  margin: 0.4rem 0 1rem 0;
+  padding: 0.3rem 0 0 7px; /*To make sure that the placeholder text has the same padding-left, and similar padding-top, as the text placeholder text in the input fields*/
+  width: 100%;
+  border: 0;
+}
+fieldset {
+  padding: 0.8rem 0 1rem 0;
+  border: 1px solid var(--off-gray-color);
+}
+legend {
+  margin-left: 1rem;
+  padding: 0 0.8rem 0 0.8rem;
+}
+::placeholder {
+  color: var(--off-gray-color); /*Off-gray text colour*/
+}
+button[type="submit"], input[type="submit"] {
+  display: block;
+  background-color: var(--lightest-color);
+  color: var(--darkest-color);
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  border: 0;
+  font-weight: bold;
+  margin: 3rem auto 2rem;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    RoanneRoams Portfolio
+  </title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="RoanneRoams"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah"/>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 10px;
+      font-family: Verdana, sans-serif;
+    }
+    html {
+      scroll-padding-top: 70px;
+    }
+    @media () {
+    }
+    #navbar {
+      background-color: #264521;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 70px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 3px solid #5fac53;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.8rem;
+    }
+    nav a {
+      font-size: 2rem;
+      color: #eff7ee;
+    }
+    main {
+      padding-top: 70px;
+    }
+    #welcome-section {
+      height: 100vh;
+      background-color: #1a1a1a;
+      text-align: center;
+      padding-top: 11%;
+    }
+    #projects {
+      min-height: 100vh;
+      background-color: #324c67;
+      text-align: center;
+    }
+    #contact {
+      height: 100vh;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+    h1 {
+      font-size: 10rem;
+      color: #eff7ee;
+      font-family: "Fleur De Leah";
+      font-weight: normal;
+    }
+    #logo-image {
+      width: 300px;
+      padding-top: 5rem;
+    }
+    #welcome_text {
+      padding-top: 8rem;
+      font-size: 2.6rem;
+    }
+    p {
+      font-size: 2rem;
+      color: #eff7ee;
+    }
+    h2, h3 {
+      font-size: 8rem;
+      font-family: "Fleur De Leah";
+      font-weight: normal;
+      padding-top: 2rem;
+      color: white;
+    }
+    .projects_grid {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-around;
+    }
+    .project_preview_block {
+      background-color: #1a1a1a;
+      height: 550px;
+      width: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .project_preview_image {
+      width: 500px;
+      height: 500px;
+      border-bottom: 1px solid #eff7ee;
+    }
+    .project_preview_text {
+      color: #eff7ee;
+      height: 50px;
+      padding-top: 7px;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#welcome-section">About me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="welcome-section">
+      <h1>
+        I am RoanneRoams
+      </h1>
+      <img id="logo-image" src="IridiScope_logo.png"/>
+      <p id="welcome_text">Welcome to my programming portfolio</p>
+    </section>
+    <section id="projects">
+      <h2 class="project-title">
+        These are some of my projects:
+      </h2>
+      <div class="projects_grid">
+        <div class="project_preview_block">
+          <a href="MoonlightMeadowZoo_projects\SurveyForm.html">
+            <img class="project_preview_image" src="SurveyForm_preview.jpg"/>
+            <p class="project_preview_text">Survey Form</p>
+          </a>
+        </div>
+        <div class="project_preview_block">
+          <a href="MoonlightMeadowZoo_projects\TributePage.html">
+            <img class="project_preview_image" src="TributePage_preview.jpg"/>
+            <p class="project_preview_text">Tribute Page</p>
+          </a>
+        </div>
+        <div class="project_preview_block">
+          <a href="MoonlightMeadowZoo_projects\ProductLandingPage.html">
+            <img class="project_preview_image" src="ProductLandingPage_preview.jpg"/>
+            <p class="project_preview_text">Product Landing Page</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h3>
+        Get in contact:
+      </h3>
+      <a href="GITHUB-LINK" id="profile-link">Check out my GitHub</a>
+    </section>
+  </main>
+</body>
+</html>
