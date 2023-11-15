@@ -7,75 +7,28 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="RoanneRoams"/>
-  <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
+  <meta name="description" content="The programming portfolio for RoanneRoams"/>
+  <meta name="keywords" content="programming coding code portfolio RoanneRoams webpage projects html css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah"/>
   <style>
     * {
+      box-sizing: border-box;
       padding: 0;
       margin: 0;
-      box-sizing: border-box;
       font-size: 10px;
       font-family: Verdana, sans-serif;
     }
     html {
-      scroll-padding-top: 70px;
-    }
-    @media () {
-    }
-    #navbar {
-      background-color: #264521;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 70px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      border-bottom: 3px solid #5fac53;
-    }
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.8rem;
-    }
-    nav a {
-      font-size: 2rem;
-      color: #eff7ee;
+      scroll-padding-top: 70px; /*To compensate for the fixed nav bar when using the internal navigation links*/
+      scroll-behavior: smooth;
     }
     main {
       padding-top: 70px;
     }
-    #welcome-section {
-      height: 100vh;
+    #welcome-section, #contact {
+      height: calc(100vh - 70px); /*To compensate for the fixed nav bar*/
+      text-align: center;
       background-color: #1a1a1a;
-      text-align: center;
-      padding-top: 11%;
-    }
-    #projects {
-      min-height: 100vh;
-      background-color: #324c67;
-      text-align: center;
-    }
-    #contact {
-      height: 100vh;
-      background-color: #1a1a1a;
-      text-align: center;
-    }
-    h1 {
-      font-size: 10rem;
-      color: #eff7ee;
-      font-family: "Fleur De Leah";
-      font-weight: normal;
-    }
-    #logo-image {
-      width: 300px;
-      padding-top: 5rem;
-    }
-    #welcome_text {
-      padding-top: 8rem;
-      font-size: 2.6rem;
     }
     p {
       font-size: 2rem;
@@ -86,36 +39,122 @@
       font-family: "Fleur De Leah";
       font-weight: normal;
       padding-top: 2rem;
-      color: white;
+      color: #eff7ee;
+    }
+    a {
+      text-decoration: none;
+      color: #eff7ee;
+      font-size: 2rem;
+    }
+
+    /*Styling for the Nav bar*/
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 70px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #264521;
+      border-bottom: 3px solid #5fac53;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /*Styling for the Welcome section*/
+    h1 {
+      font-size: 10rem;
+      color: #eff7ee;
+      font-family: "Fleur De Leah";
+      font-weight: normal;
+      padding-top: 200px;
+    }
+    #logo-image {
+      width: 300px;
+      padding-top: 5rem;
+    }
+    #welcome_text {
+      padding-top: 8rem;
+      font-size: 2.6rem;
+    }
+
+    /*Styling for the Projects section*/
+    #projects {
+      min-height: calc(100vh - 70px); /*To compensate for the fixed nav bar, and also leave space for the section to expand for future additional projects*/
+      text-align: center;
+      background-color: #324c67;
     }
     .projects_grid {
       padding-top: 2rem;
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
     .project_preview_block {
-      background-color: #1a1a1a;
-      height: 550px;
-      width: 500px;
-      border-radius: 10px;
-      overflow: hidden;
+      /* height: 550px; */
+      /* width: 500px; */
+      width: 30%;
+      min-width: 400px;
       text-align: center;
+      overflow: hidden;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+    .project_preview_block:hover {
+      background-color: #333333;
     }
     .project_preview_image {
-      width: 500px;
-      height: 500px;
+      /* width: 500px; */
+      /* height: 500px; */
+      width: 100%;
+      /* width: 300px; */
       border-bottom: 1px solid #eff7ee;
     }
     .project_preview_text {
-      color: #eff7ee;
       height: 50px;
       padding-top: 7px;
+    }
+
+    /*Styling for the Contact section*/
+    #contact_links {
+      width: 40%;
+      min-width: 350px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 300px auto 0 auto;
+      font-size: 3rem;
+      color: #eff7ee;
+    }
+    #profile-link, #GitHub-link {
+      font-size: 3rem;
+      margin: 0 20px 20px 20px;
+    }
+    #GitHub_logo, #freeCodeCamp_logo {
+      height: 2.7rem;
+      /* padding-top: 10px; */
+    }
+
+    @media (max-width: 800px) { /*Styling for phone screens and other smaller screens*/
+      h1 {
+        font-size: 8rem;
+      }
+      #welcome_text {
+        font-size: 2rem;
+      }
+      h2, h3 {
+        font-size: 6rem;
+      }
     }
   </style>
 </head>
 <body>
   <nav id="navbar">
-    <a href="#welcome-section">About me</a>
+    <a href="#welcome-section">Welcome</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -124,7 +163,7 @@
       <h1>
         I am RoanneRoams
       </h1>
-      <img id="logo-image" src="IridiScope_logo.png"/>
+      <img id="logo-image" src="IridiScope_logo.png"/ alt="The IridiScope logo">
       <p id="welcome_text">Welcome to my programming portfolio</p>
     </section>
     <section id="projects">
@@ -133,20 +172,20 @@
       </h2>
       <div class="projects_grid">
         <div class="project_preview_block">
-          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/SurveyForm.html">
-            <img class="project_preview_image" src="SurveyForm_preview.jpg"/>
+          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/SurveyForm.html" target="_blank">
+            <img class="project_preview_image" src="SurveyForm_preview.jpg" alt="A preview image of my Survey Form project"/>
             <p class="project_preview_text">Survey Form</p>
           </a>
         </div>
         <div class="project_preview_block">
-          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/TributePage.html">
-            <img class="project_preview_image" src="TributePage_preview.jpg"/>
+          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/TributePage.html" target="_blank">
+            <img class="project_preview_image" src="TributePage_preview.jpg" alt="A preview image of my Tribute Page project"/>
             <p class="project_preview_text">Tribute Page</p>
           </a>
         </div>
         <div class="project_preview_block">
-          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/ProductLandingPage.html">
-            <img class="project_preview_image" src="ProductLandingPage_preview.jpg"/>
+          <a href="https://wolfvogel.github.io/MoonlightMeadowZoo_projects/ProductLandingPage.html" target="_blank">
+            <img class="project_preview_image" src="ProductLandingPage_preview.jpg" alt="A preview mage of my Product Landing Page project"/>
             <p class="project_preview_text">Product Landing Page</p>
           </a>
         </div>
@@ -156,7 +195,16 @@
       <h3>
         Get in contact:
       </h3>
-      <a href="GITHUB-LINK" id="profile-link">Check out my GitHub</a>
+      <div id="contact_links">
+        <a href="https://github.com/Wolfvogel" target="_blank" id="GitHub-link" alt="The GitHub logo">
+          <img src="GitHub_logo.png" id="GitHub_logo"/>
+          GitHub
+        </a>
+        <a href="https://www.freecodecamp.org/Lidewij" target="_blank" id="profile-link" alt="The freeCodeCamp logo">
+          <img src="freeCodeCamp_logo.png" id="freeCodeCamp_logo"/>
+          freeCodeCamp
+        </a>
+      </div>
     </section>
   </main>
 </body>
